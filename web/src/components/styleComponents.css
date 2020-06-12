@@ -1,0 +1,79 @@
+.button-login {
+    background-color: rgb(255, 174, 93);
+    color: white;
+    border-style: none;
+    border-radius: 7px;
+    width: 40px;
+    height: 25px;
+    margin: 3px;
+  }
+
+.button-register {
+    background-color: rgb(255, 174, 93);
+    width: 100px;
+    height: 25px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    margin: 3px;
+}
+
+.form-bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+.login-bar {
+    height: 80px;
+    width: 320px;
+
+}
+
+
+.input-login {
+    width: 280px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: rgb(255, 174, 93);
+    outline: none;
+}
+
+.button-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* ///////////////////////////////////////*/
+/* Estilo do componente Painel de Usuario */
+
+
+
+.painel-bar {
+    height: 80px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    margin: 20px;
+}
+
+
+.button-logout {
+    background-color: rgb(255, 174, 93);
+    outline: black;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+}
+
+
+/* Time Line das Rifas */
+
+.list-timeline {
+    background-color:rgba(255,255,255,0.4);
+    margin: 10px;
+    width: 800px;
+    height: 100px;
+}

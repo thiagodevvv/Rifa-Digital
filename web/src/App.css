@@ -1,0 +1,58 @@
+.container {
+  background-color: rgb(255, 246, 235);
+  width: 180vh;
+  border-radius: 60px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: rgb(255, 227, 196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  /* border: solid 1px red; */
+
+}
+
+a {
+  text-decoration: none;
+  color: rgb(60, 58, 56);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+}
+
+.menu-bar {
+  width: 400px;
+  height: 50px;
+  display: flex; 
+  flex-direction: row;  
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid 1px black; */
+
+}
+
+.logo-bar {
+  display: flex;  
+  left: 120px;
+  font-size: 24px;
+  margin: 20px;
+}
+
+.R {
+  color:rgb(255, 174, 93);
+}
+
+
+

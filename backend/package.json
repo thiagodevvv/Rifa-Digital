@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.655.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.12.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "knex": "^0.20.13",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "node-localstorage": "^2.1.6",
+    "passport": "^0.4.1",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.18.2",
+    "qs": "^6.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
