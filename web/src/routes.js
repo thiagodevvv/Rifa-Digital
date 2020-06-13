@@ -3,9 +3,10 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 
 import { Context } from '../src/Context/AuthContext'
 
-import LoginBar from './components/LoginBar'
+import Home from './pages/Home'
 import CreateRifa from './pages/CreateRifa'
 import Register from './pages/Register'
+import Login from './pages/Login'
 
 function CustomRoute({ isPrivate, ...rest }) {
   const { loading, authenticated} = useContext(Context)
@@ -24,7 +25,8 @@ function CustomRoute({ isPrivate, ...rest }) {
 export default function Routes() {
   return (
     <Switch>
-      <CustomRoute exact path="/LoginBar" component={LoginBar} />
+       <CustomRoute exact path="/"  component={Home} />
+      <CustomRoute exact path="/Login" component={Login} />
       <CustomRoute exact path="/register" component={Register} />
       <CustomRoute isPrivate exact path="/CreateRifa" component={CreateRifa} />
     </Switch>

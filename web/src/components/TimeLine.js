@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import {Context} from '../Context/AuthContext'
 import FlatList from 'flatlist-react'
 
@@ -6,6 +6,7 @@ import FlatList from 'flatlist-react'
 
 
 function TimeLine () {
+   
     const [teste, setTeste] = useState([])
     const { getRifas } = useContext(Context)
 
@@ -13,8 +14,10 @@ function TimeLine () {
         const dados = await getRifas()
         const { data } = dados
         setTeste(data)
-    }
-    useEffect( () => pegarDados)
+    }useEffect( () => {
+        pegarDados()
+    })
+    
 
     const renderDados = (person, id) => {
         return (

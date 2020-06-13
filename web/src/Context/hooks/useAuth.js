@@ -1,6 +1,6 @@
-import React from 'react'
 import {useState, useEffect} from 'react'
 import api from '../../services/api'
+import history from '../../history'
 
 export default function useAuth() {
     const [authenticated, setAuthenticated] = useState(false)
@@ -57,6 +57,7 @@ export default function useAuth() {
          setAuthenticated(true)
         setIsLoggedIn(true)
          alert('Logado com sucesso!')
+         history.push('/CreateRifa')
         }catch(err) {
             alert(err)
         }
