@@ -72,9 +72,9 @@ module.exports = app => {
 
     const getRifa = (req, res) => {
 
-        // knex.from('rifas').innerJoin('images', 'rifas.id', 'images.imagesID')
-        app.db('rifas')
-        .then(rifas => res.status(200).json(rifas))
+      const {data } = knex.from('rifas').innerJoin('images', 'rifas.id', 'images.imagesID')
+    
+        .then(data => res.status(200).json(data))
         .catch(err => res.status(500).send(err))
 
     }

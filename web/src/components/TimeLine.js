@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from 'react'
 import {Context} from '../Context/AuthContext'
 import FlatList from 'flatlist-react'
 
-
+import './styleComponents.css'
 
 
 function TimeLine () {
@@ -18,28 +18,38 @@ function TimeLine () {
         pegarDados()
     })
     
+    const style = {
+        height: "300px",
+        width: "600px",
+        borderRadius: "10px"
+    }
 
     const renderDados = (person, id) => {
         return (
-            <div className="list-timeline"key={id}>
+            <div className="list-timeline"
+            key={id}>
+                 <div className="image-timeline">
                 {person.description}<br></br>
                 <b>{person.premio}</b><br></br>
                 <b>{person.datasorteio}</b><br></br>
                 <b>{person.valor}</b><br></br>
+               
+                <img className="image" style={style} 
+                      src={person.url}  alt="imagem da rifa"/>
+                </div>
             </div>
+    
         )
     }
     return (
-        <div className="time-line">
-                <ul>
-                    <FlatList 
+        <ul>
+                <FlatList 
                     list={teste}
                     renderItem={renderDados}
                     renderWhenEmpty={() => <div>Carregando rifas...</div>}
                     renderOnScroll={true}
                     />
-                </ul>
-        </div>
+        </ul>
 
     )
 }
