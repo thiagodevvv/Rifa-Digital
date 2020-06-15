@@ -8,7 +8,7 @@ import './styleComponents.css'
 function TimeLine () {
    
     const [teste, setTeste] = useState([])
-    const { getRifas } = useContext(Context)
+    const { getRifas,formatedDate } = useContext(Context)
 
     async function pegarDados () {
         const dados = await getRifas()
@@ -17,30 +17,27 @@ function TimeLine () {
     }useEffect( () => {
         pegarDados()
     })
-    
-    const style = {
-        height: "300px",
-        width: "600px",
-        borderRadius: "10px"
-    }
 
-    const renderDados = (person, id) => {
+    const renderDados = (data, id) => {
         return (
             <div className="list-timeline"
             key={id}>
                  <div className="image-timeline">
-                {person.description}<br></br>
-                <b>{person.premio}</b><br></br>
-                <b>{person.datasorteio}</b><br></br>
-                <b>{person.valor}</b><br></br>
-               
-                <img className="image" style={style} 
-                      src={person.url}  alt="imagem da rifa"/>
+                <h2>Descrição: {data.description}<br></br></h2>
+                <h3>Prêmio: {data.premio}<br></br></h3>
+                <img className="image" src={data.url}  alt="imagem da rifa"/>
+
+                    <div className="container-isolado">
+                        <h4>Data do Sorteio:  {formatedDate(data.datasorteio)}</h4>
+                        <div className="separador"></div>
+                        <h4>Valor: R$ {data.valor}<br></br></h4>
+                    </div>
                 </div>
             </div>
     
         )
     }
+
     return (
         <ul>
                 <FlatList 
