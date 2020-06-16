@@ -1,6 +1,10 @@
+
+/* CSS DO LOGINBAR // */
+
+
 .button-login {
     background-color: rgb(255, 174, 93);
-    color: black;
+    color: white;
     border-style: none;
     border-radius: 7px;
     width: 40px;
@@ -14,7 +18,7 @@
     height: 25px;
     border-style: none;
     border-radius: 5px;
-    color: black;
+    color: white;
     margin: 3px;
 }
 
@@ -44,6 +48,12 @@
     justify-content: flex-start;
 }
 
+
+
+
+
+
+
 /* ///////////////////////////////////////*/
 /* Estilo do componente Painel de Usuario */
 
@@ -51,11 +61,11 @@
 
 .painel-bar {
     height: 80px;
-    width: 320px;
+    width: 500px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* border: 1px solid black; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
 }
 
@@ -64,9 +74,34 @@
     background-color: rgb(255, 174, 93);
     outline: black;
     border: none;
-    width: 100px;
+    width: 80px;
+    height: 20px;
     border-radius: 5px;
+    color:white;
 }
+
+.button-logout:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.button-menu {
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background: none;
+    background-color: rgb(255, 174, 93);
+    border-radius: 10px;
+    color: white;
+    
+}
+
+.button-menu:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
 
 
 /* Time Line das Rifas */
@@ -107,7 +142,7 @@
     width: 150px;
     height: 35px;
     background: rgb(255, 174, 93);
-    color: black;
+    color: white;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -128,7 +163,7 @@
 
 
 .btn span{
-    color: black;
+    color: white;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 15px;
@@ -162,7 +197,7 @@
     width: 150px;
     height: 35px;
     background: rgb(255, 174, 93);
-    color: black;
+    color: white;
     border-radius: 5px;
     display: flex;
     align-items: center;

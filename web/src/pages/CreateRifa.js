@@ -1,29 +1,28 @@
 import React, {useState, useContext} from 'react'
 import { Context } from '../Context/AuthContext'
 
-
+import './style/StyleCreate.css'
 
 export default function CreateRifa () {
 
-    const {handleCreateRifa,handleLogout} = useContext(Context)
+    const { handleCreateRifa } = useContext(Context)
 
     const [desc, setDesc] = useState('')
     const [premio, setPremio] = useState('')
     const [datasorteio, setDatasorteio] = useState('')
-    const [valor, setValor] = useState(0)
-    const [maxNumeros, setMaxnumeros] = useState(0)
+    const [valor, setValor] = useState('')
+    const [maxNumeros, setMaxnumeros] = useState('')
 
 return (
-    <div>
-        <form >
-            <input value={desc} onChange={e => setDesc(e.target.value)} placeholder="desc"></input>
-            <input value={premio} onChange={e => setPremio(e.target.value)} placeholder="premio"></input>
-            <input value={datasorteio} onChange={e => setDatasorteio(e.target.value)} placeholder="data sorteio"></input>
-            <input value={valor} onChange={e => setValor(e.target.value)} placeholder="valor"></input>
-            <input value={maxNumeros} onChange={e => setMaxnumeros(e.target.value)} placeholder="max numeros"></input>
-            <button type="button" onClick={() => handleCreateRifa(desc,premio,datasorteio,valor,maxNumeros) }>Enviar</button>
-        </form>
-    <button type="button" onClick={handleLogout}>SAIR</button>
+    <div className="container-create-rifa">
+            <form className="form-create-rifa">
+                    <input className="input-create-rifa" value={desc} onChange={e => setDesc(e.target.value)} placeholder="Descrição"></input>
+                    <input className="input-create-rifa" value={premio} onChange={e => setPremio(e.target.value)} placeholder="Prêmio"></input>
+                    <input className="input-create-rifa" value={datasorteio} onChange={e => setDatasorteio(e.target.value)} placeholder="Data do sorteio"></input>
+                    <input className="input-create-rifa" value={valor} onChange={e => setValor(e.target.value)} placeholder="Valor"></input>
+                    <input className="input-create-rifa" value={maxNumeros} onChange={e => setMaxnumeros(e.target.value)} placeholder="Máximo de numeros"></input>
+                    <button className="button-create-rifa" type="button" onClick={() => handleCreateRifa(desc,premio,datasorteio,valor,maxNumeros) }>Criar Rifa</button>
+            </form>
     </div>
 )
 }

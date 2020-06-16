@@ -16,7 +16,7 @@ export default function LoginBar () {
                 onChange={e => setEmail(e.target.value)} placeholder="Email">
                 </input>
 
-                <input className="input-login" value={password}
+                <input className="input-login" value={password} type="password"
                 onChange={e => setPassword(e.target.value)} placeholder="Password">
                 </input>
 

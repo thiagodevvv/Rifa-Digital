@@ -26,9 +26,9 @@ export default function Routes() {
   return (
     <Switch>
        <CustomRoute exact path="/"  component={Home} />
-      <CustomRoute exact path="/Login" component={Login} />
+      <CustomRoute exact path="/login" component={Login} />
       <CustomRoute exact path="/register" component={Register} />
-      <CustomRoute isPrivate exact path="/CreateRifa" component={CreateRifa} />
+      <CustomRoute isPrivate exact path="/create" component={CreateRifa} />
     </Switch>
   );
 }

@@ -57,7 +57,7 @@ export default function useAuth() {
          setAuthenticated(true)
         setIsLoggedIn(true)
          alert('Logado com sucesso!')
-        //  history.push('/CreateRifa')
+         history.push('/')
         }catch(err) {
             alert(err)
         }

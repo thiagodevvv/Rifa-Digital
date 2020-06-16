@@ -1,0 +1,39 @@
+.container-create-rifa {
+    background-color: rgb(255, 246, 235);
+    width: 180vh;
+    height: 80vh;
+    border-radius: 60px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form-create-rifa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-create-rifa {
+
+    width: 500px;
+    height: 30px;
+    border-color: rgb(255, 174, 93);
+    border-radius: 20px;
+    outline: none;
+    margin: 10px;
+}
+
+.button-create-rifa {
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(255,174,93);
+    border: none;
+    color: white;
+}
+
