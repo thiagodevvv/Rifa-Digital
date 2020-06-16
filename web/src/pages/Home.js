@@ -14,8 +14,8 @@ function Home () {
                 <h1> <a className="R">R</a>ifa <br></br> <a className="R">D</a>igital</h1>
               </section>
               <div className="menu-bar">
-                  <a href="#home">Home  </a>
-                  <a href="#register">Register  </a>
+                  <a href="/">Home  </a>
+                  <a href="/register">Register  </a>
                   <a href="#explore_rifas">Explore Rifas  </a>
                   <a href="#contact">Contact  </a>
               </div>

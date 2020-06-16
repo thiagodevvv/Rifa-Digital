@@ -10,12 +10,15 @@ module.exports = app => {
       
     }
     const save = (req,res) => {
+        if(!req.body) {
+            return res.status(400).send('error nos inputs')
+        }
         obterHash(req.body.password, hash => {
             const password = hash
             app.db('users')
             .insert({name: req.body.name,email: req.body.email, password})
-            .then(_ => res.status(204).send())//resposta de sucsso q foi gravado no banco
-            .catch(err => res.status(400).send('Error ao criar a conta'))//se der erro enviar um json
+            .then(response => res.status(200).send(response))
+            .catch(err => res.status(400).send('Error ao criar a conta'))
         })
     }
     

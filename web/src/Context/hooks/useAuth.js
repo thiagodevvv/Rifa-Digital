@@ -57,7 +57,7 @@ export default function useAuth() {
          setAuthenticated(true)
         setIsLoggedIn(true)
          alert('Logado com sucesso!')
-         history.push('/CreateRifa')
+        //  history.push('/CreateRifa')
         }catch(err) {
             alert(err)
         }
@@ -72,12 +72,20 @@ export default function useAuth() {
       }
 
       async function register (name,email,password) {
-        console.log(name)
-        await api.post('http://localhost:3333/signup', {
+
+        try {
+            await api.post('http://localhost:3333/signup', {
             name:name,
             email:email,
             password:password
         })
+        alert('Conta criada com sucesso!')
+        history.push('/')
+        }catch(err) {
+            alert(err)
+        }
+         
+       
       }
 
 
