@@ -93,9 +93,16 @@
     margin: 20px;
   }
   
-  .R {
+  .orange {
     color:rgb(255, 174, 93);
   }
+
+.h1-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
   
   
   

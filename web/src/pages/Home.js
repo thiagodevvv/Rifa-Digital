@@ -11,7 +11,7 @@ function Home () {
         <div className="container">
             <header className="header">
               <section className="logo-bar">
-                <h1> <a className="R">R</a>ifa <br></br> <a className="R">D</a>igital</h1>
+                <h1> <span className="orange">R</span>ifa <br></br> <span className="orange">D</span>igital</h1>
               </section>
               <div className="menu-bar">
                   <a href="/">Home  </a>

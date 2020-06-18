@@ -12,10 +12,10 @@ export default function Register () {
     
     return (
         <div className="container-register">
-            <h1 style={{display: "flex", 
-            justifyContent: "center",
-            alignItems: "center",
-            fontFamily: "san-serif"}}>Cadastro</h1>
+            <h1 className="h1-register"> 
+            <span className="orange">C</span>riar 
+            <div style={{width: "10px"}}></div>
+            <span className="orange">C</span>onta</h1>
             <form className="form-register">
                 <input className="input-register" type="email" placeholder="Name" value={name} onChange={e => setName(e.target.value)}/>
                 <input className="input-register" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)}/>
