@@ -17,7 +17,7 @@ module.exports = app => {
             const password = hash
             app.db('users')
             .insert({name: req.body.name,email: req.body.email, password})
-            .then(response => res.status(200).send(response))
+            .then(data => res.status(200).send(data))
             .catch(err => res.status(400).send('Error ao criar a conta'))
         })
     }

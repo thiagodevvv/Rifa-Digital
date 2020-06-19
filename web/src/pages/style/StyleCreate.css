@@ -12,8 +12,8 @@
 
 .container-form{
     width: 600px;
-    height: 400px;
-    background-color: rgba(255,255,255,0.9);
+    height: 450px;
+    background-color: rgb(255, 227, 196);
     border-radius: 30px;
 }
 
@@ -35,6 +35,10 @@
     margin: 10px;
 }
 
+.input-create-rifa:focus{
+    border: 2px solid black;
+}
+
 .button-create-rifa {
     width: 300px;
     height: 30px;
@@ -46,4 +50,9 @@
     font-size: 20px;
 }
 
+.button-create-rifa:hover {
+    cursor: pointer;
+    width: 310px;
+    height: 35px;
+}
 

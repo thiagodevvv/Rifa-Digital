@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.655.0",
+    "axios": "^0.19.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
@@ -18,6 +19,7 @@
     "date-fns": "^2.12.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "jwt-simple": "^0.5.6",
     "knex": "^0.20.13",
     "moment": "^2.24.0",
