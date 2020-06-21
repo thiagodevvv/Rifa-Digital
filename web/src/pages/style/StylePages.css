@@ -1,11 +1,17 @@
 .container {
-    background-color: rgb(255, 246, 235);
+    background-color: rgba(255, 246, 235);
     width: 180vh;
     border-radius: 60px;
     margin-top: 80px;
-    display: flex;
-    flex-direction: column;
   }
+
+.container2{
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+
 
 .container-register {
     background-color: rgb(255, 246, 235);
@@ -60,11 +66,9 @@ body {
   
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100px;
-    /* border: solid 1px red; */
-  
   }
   
 a {
@@ -87,10 +91,10 @@ a {
   }
   
 .logo-bar {
-    display: flex;  
     left: 120px;
     font-size: 24px;
     margin: 20px;
+    position: absolute;
 }
 
 .header-box-shadow:hover{

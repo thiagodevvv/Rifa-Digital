@@ -10,18 +10,20 @@ function Home () {
         <body>  
         <div className="container">
             <header className="header">
-              <section className="logo-bar">
-                <h1> <span className="orange">R</span>ifa <br></br> <span className="orange">D</span>igital</h1>
-              </section>
+                <section className="logo-bar">
+                    <h1> <span className="orange">R</span>ifa <br></br> <span className="orange">D</span>igital</h1>
+                </section>
               <div className="menu-bar">
                   <a className="header-box-shadow" href="/">Home  </a>
                   <a className="header-box-shadow" href="/register">Register  </a>
                   <a className="header-box-shadow" href="#explore_rifas">Explore Rifas  </a>
                   <a className="header-box-shadow" href="#contact">Contact  </a>
               </div>
-              <Control isLoggedIn={false} />
             </header>
+        <div className="container2">
             <TimeLine/>
+            <Control isLoggedIn={false} />
+        </div>    
         </div>
     </body>
     )

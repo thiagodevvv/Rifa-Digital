@@ -47,13 +47,14 @@ export default function useAuth() {
         // e.preventDefault()
 
         try {
-            const {data: {token}} = await api.post('http://localhost:3333/signin',{
+            const {data: {token,name}} = await api.post('http://localhost:3333/signin',{
             email: email,
             password: password
           })
-        
+         localStorage.setItem('name', name) 
          localStorage.setItem('token', JSON.stringify(token))
          api.defaults.headers.authorization = `Bearer ${token}`
+          
          setAuthenticated(true)
         setIsLoggedIn(true)
          alert('Logado com sucesso!')

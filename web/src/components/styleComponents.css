@@ -28,20 +28,33 @@
   }
 
 .login-bar {
-    height: 80px;
+    height: 300px;
     width: 320px;
-
+    margin: 80px;
+    flex: 2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255, 227, 196);
 }
+
 
 
 .input-login {
     width: 280px;
+    height: 30px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: rgb(255, 174, 93);
     outline: none;
 }
-
+.input-login:focus {
+    border: 1px solid black;
+    width: 285px;
+    height: 35px;
+}
 .button-inline {
     display: flex;
     flex-direction: row;
@@ -57,16 +70,20 @@
 /* ///////////////////////////////////////*/
 /* Estilo do componente Painel de Usuario */
 
-
-
-.painel-bar {
-    height: 80px;
-    width: 500px;
+.container-painel{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    height: 410px;
+    width: 700px;
+    margin: 40px;
+    border-radius: 20px;
+    background-color:rgb(255, 227, 196);
+}
+
+.bem-vindo {
+    font-family: Arial;
 }
 
 
@@ -105,6 +122,10 @@
 
 
 /* Time Line das Rifas */
+
+.container-timeline{
+    flex: 3;
+}
 
 .list-timeline {
     background-color:rgb(255, 227, 196);

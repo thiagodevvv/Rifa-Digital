@@ -10,7 +10,9 @@ export default function LoginBar () {
     const [password, setPassword] = useState('')
 
     return (
-    <section className="login-bar">
+    
+    <div className="login-bar">
+        <h1><span className="orange">E</span>ntrar</h1>
         <form className="form-bar">
                 <input className="input-login" value={email} 
                 onChange={e => setEmail(e.target.value)} placeholder="Email">
@@ -25,7 +27,7 @@ export default function LoginBar () {
                     <button className="button-register">Register</button>
                 </div>
         </form>
-    </section>    
+    </div>    
     )
 }
 

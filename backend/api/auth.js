@@ -18,7 +18,7 @@ module.exports = app => {
                 }
                 const payload = {id: user.id}//se passou de todos if, ele validou o user e vai armazenar o valor no token
                 const token = jwt.encode(payload, authSecret)
-                res.status(200).json({token:token})
+                res.status(200).json({token:token, name: user.name})
                 
             })
         }

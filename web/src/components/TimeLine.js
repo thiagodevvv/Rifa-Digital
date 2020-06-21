@@ -44,11 +44,11 @@ function TimeLine () {
                         
                 </div>
             </div>
-    
         )
     }
 
     return (
+        <div className="container-timeline">
         <ul>
                 <FlatList 
                     list={teste}
@@ -57,7 +57,7 @@ function TimeLine () {
                     renderOnScroll={true}
                     />
         </ul>
-
+        </div>
     )
 }
 
