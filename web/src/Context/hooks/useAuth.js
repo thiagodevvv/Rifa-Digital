@@ -94,5 +94,12 @@ export default function useAuth() {
             const response = await api.get('http://localhost:3333/allrifas')
             return response
       }
-      return {handleLogin, handleCreateRifa, handleLogout, authenticated, loading, register,isLoggedIn, getRifas}
+
+      
+      async function updatePass(newPass) {
+          const { data } = await api.put('http://localhost:3333/updatepass', newPass)
+          return data
+      }
+
+      return {handleLogin, handleCreateRifa, handleLogout, authenticated, loading, register,isLoggedIn, getRifas, updatePass}
 }

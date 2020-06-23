@@ -116,6 +116,17 @@ a {
   align-items: center;
   font-family: Arial;
 }
+
+
+
+/* PAGE ACCOUNT */
+
+.btn-updatepass{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
   
   
   

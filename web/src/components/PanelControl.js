@@ -12,7 +12,7 @@ function PanelControl() {
     return (
             <div className="container-painel">
                     <span className="bem-vindo"><h1>Seja Bem-Vindo, {name}</h1></span>
-                        <button className="button-menu" type="button" onClick={()=> history.push('/create')}>Minha conta</button>
+                        <button className="button-menu" type="button" onClick={()=> history.push('/account')}>Minha conta</button>
                         <button className="button-menu" type="button" onClick={()=> history.push('/create')}>Minhas Rifas</button>
                 
                         <button className="button-menu" type="button" onClick={()=> history.push('/create')}>Rifas compradas</button>

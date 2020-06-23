@@ -56,3 +56,15 @@
     height: 35px;
 }
 
+
+
+
+/* DADOS PESSOAIS */
+
+
+.dados-pessoais {
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
