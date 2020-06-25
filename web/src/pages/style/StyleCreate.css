@@ -36,7 +36,9 @@
 }
 
 .input-create-rifa:focus{
-    border: 2px solid black;
+    border: 1px solid black;
+    width: 520px;
+    height: 40px;
 }
 
 .button-create-rifa {

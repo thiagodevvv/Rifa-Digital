@@ -29,7 +29,7 @@ module.exports = app => {
             })
             
         }
-        obterHash(req.body.password, hash => {
+        obterHash(req.body.newPass, hash => {
             const password = hash
             app.db('users')
             .where({id: req.user.id})

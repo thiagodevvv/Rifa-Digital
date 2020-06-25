@@ -12,6 +12,11 @@
     margin: 3px;
   }
 
+.button-login:hover {
+    cursor: pointer;
+    opacity: .8;
+}  
+
 .button-register {
     background-color: rgb(255, 174, 93);
     width: 100px;
@@ -20,6 +25,11 @@
     border-radius: 5px;
     color: white;
     margin: 3px;
+}
+
+.button-register:hover {
+    cursor: pointer;
+    opacity: .8;
 }
 
 .form-bar {
@@ -130,7 +140,7 @@
 .list-timeline {
     background-color:rgb(255, 227, 196);
     width: 700px;
-    height: 540px;
+    height: 560px;
     border-radius: 50px;
     margin-top: 30px;
 }

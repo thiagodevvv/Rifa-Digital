@@ -97,8 +97,15 @@ export default function useAuth() {
 
       
       async function updatePass(newPass) {
-          const { data } = await api.put('http://localhost:3333/updatepass', newPass)
-          return data
+        
+            try {
+                const { data } = await api.put('http://localhost:3333/user/updatepass', {
+                    "newPass": newPass
+                })
+                alert('Senha alterado com sucesso!')
+            }catch(err) {
+                console.log(err)
+            }
       }
 
       return {handleLogin, handleCreateRifa, handleLogout, authenticated, loading, register,isLoggedIn, getRifas, updatePass}

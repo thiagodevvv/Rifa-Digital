@@ -11,5 +11,6 @@ export default function useFuncsUtils() {
             return dia + "/" + mes + "/" + ano 
    }
 
+
    return {formatedDate}
 }
