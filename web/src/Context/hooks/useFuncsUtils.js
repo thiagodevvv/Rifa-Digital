@@ -1,4 +1,5 @@
-
+import api from '../../services/api'
+import tester from '../../tabuleiro.jpeg'
 export default function useFuncsUtils() {
    
 
@@ -12,5 +13,18 @@ export default function useFuncsUtils() {
    }
 
 
-   return {formatedDate}
+    async function AddImage (file) {
+      const data = new FormData()
+      data.append('file', file)
+      try {
+         const id = localStorage.getItem('id')
+         await api.post(`http://localhost:3333/images/${id}`, data)
+   }catch(err) {
+      alert('Erro ao adicionar imagem')
+      console.log(err)
+   }
+}
+
+
+   return {formatedDate, AddImage}
 }

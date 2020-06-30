@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "date-fns": "^2.14.0",
     "flatlist-react": "^1.4.2",
+    "fuctbase64": "^1.4.0",
     "history": "^4.10.1",
     "moment": "^2.26.0",
     "react": "^16.13.1",

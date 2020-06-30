@@ -209,3 +209,13 @@ a {
   font-size: 20px;
   margin: 20px;
 }
+
+
+#box-update-email {
+  display: none;
+  width: 190;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

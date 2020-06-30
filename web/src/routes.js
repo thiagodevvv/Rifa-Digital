@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import CreateRifa from './pages/CreateRifa'
 import Register from './pages/Register'
 import Account from './pages/Account'
+import Image from './pages/Image'
 
 function CustomRoute({ isPrivate, ...rest }) {
   const { loading, authenticated} = useContext(Context)
@@ -29,6 +30,7 @@ export default function Routes() {
       <CustomRoute exact path="/register" component={Register} />
       <CustomRoute isPrivate exact path="/create" component={CreateRifa} />
       <CustomRoute isPrivate exact path="/account" component={Account} />
+      <CustomRoute isPrivate exact path="/addimage" component={Image} />
     </Switch>
   );
 }

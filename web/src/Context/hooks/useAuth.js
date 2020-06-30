@@ -25,15 +25,18 @@ export default function useAuth() {
         setAuthenticated(true)
        
         try {
-        await api.post('http://localhost:3333/rifas', {
+        const { data } = await api.post('http://localhost:3333/rifas', {
             description: desc,
             premio: premio,
             datasorteio: datasorteio,
             valor: valor,
             maxNumeros: maxNumeros
         })
+        const { id } = data[0]
+        localStorage.setItem('id', id)
         
-        alert('Rifa criada com sucesso')
+        alert(`Rifa criada com sucesso`)
+        history.push('/addimage')
     }catch(e) {
         alert('Erro ao criar rifa')
     }

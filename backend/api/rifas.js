@@ -40,7 +40,8 @@ module.exports = app => {
             maxNumeros: req.body.maxNumeros,
             userID: req.body.userId
         })
-        .then(_ => res.status(200).send())
+        .returning(['id'])
+        .then(data => res.status(200).json(data))
         .catch(err => res.status(400).send(err))
         
     }

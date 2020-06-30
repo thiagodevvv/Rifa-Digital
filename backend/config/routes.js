@@ -23,8 +23,9 @@ module.exports = app => {
        .post(app.api.rifas.saverifa)
 
    app.route('/images/:id')
-      .all(app.config.passport.authenticate())
+      // .all(app.config.passport.authenticate())
       .post( multer(multerConfig).single("file"), async (req,res) => {
+         
       const {originalname: name, size, key, location: url = ''} = req.file
       await app.db('images')
       .insert({
@@ -34,6 +35,7 @@ module.exports = app => {
          url,
          imagesID: req.params.id
       })
+      .then(res.status(200).send('Imagem enviada'))
       .catch(err => res.status(400).send(err))
       return res.status(200).send(console.log("FILE UPLOAD 100%"))
    })
