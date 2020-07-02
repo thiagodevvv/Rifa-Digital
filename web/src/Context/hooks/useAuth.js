@@ -102,7 +102,7 @@ export default function useAuth() {
       async function updatePass(newPass) {
         
             try {
-                const { data } = await api.put('http://localhost:3333/user/updatepass', {
+                await api.put('http://localhost:3333/user/updatepass', {
                     "newPass": newPass
                 })
                 alert('Senha alterado com sucesso!')

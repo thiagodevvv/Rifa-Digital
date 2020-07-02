@@ -1,5 +1,4 @@
 import api from '../../services/api'
-import tester from '../../tabuleiro.jpeg'
 export default function useFuncsUtils() {
    
 
@@ -13,9 +12,10 @@ export default function useFuncsUtils() {
    }
 
 
-    async function AddImage (file) {
+    async function AddImage (files) {
+      const archivefile = files[0]
       const data = new FormData()
-      data.append('file', file)
+      data.append("file", archivefile)
       try {
          const id = localStorage.getItem('id')
          await api.post(`http://localhost:3333/images/${id}`, data)
