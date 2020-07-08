@@ -1,20 +1,20 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState,useEffect} from 'react'
 import {Context} from '../Context/AuthContext'
 import Dropzone from 'react-dropzone'
 import { DropContainer, UploadMessage} from './style/style'
 import FileList from '../components/FileList/index'
 import { uniqueId } from 'lodash'
 import filesize from 'filesize'
-
+import api from '../services/api'
 
 function Image () {
 
-   const [state, setState] = useState([])
+
+  const [teste, setTeste] = useState([])
     
     const { AddImage } = useContext(Context)
 
-    const handleSubmit =  files => {
-       
+    const handleSubmit =  (files) => {
             const uploadFiles = files.map(file => ({
                 file,
                 id: uniqueId(),
@@ -27,13 +27,40 @@ function Image () {
                 url: null
             }))
 
-            setState(... uploadFiles)
+            setTeste([...teste, {
+                file: uploadFiles[0].file,
+                name: uploadFiles[0].name,
+                readableSize: uploadFiles[0].readableSize,
+                preview: uploadFiles[0].preview,
+                progress: 0,
+                uploaded: false,
+                error: false,
+                url: null,
+                id: uploadFiles.id
+             }])  
+
+             const updateFile = (id, data) => {
+                setTeste({uploadFiles: uploadFiles.map(uploadFile => {
+                    return id === uploadFile.id ? { ...uploadFile, ...data} : uploadFile
+                })})
+             }
+        
+
      try {
-     const func = async () => {
-        await AddImage(files)
+        const id = localStorage.getItem('id')
+        const data = new FormData()
+        data.append("file", uploadFiles.file)
+        console.log(data)
+        api.post(`/images/${id}`, data, {
+            onUploadProgress: e => {
+                const progress = parseInt(Math.round((e.loaded * 100) / e.total))
+                updateFile(uploadFiles.id, {
+                    progress,
+                })
+            }
+        })
      }
-     func()
-     }catch(err) {
+     catch(err) {
          console.log(err)
      }
     }
@@ -71,8 +98,8 @@ function Image () {
                                    
                                 )}
                             </Dropzone>
-                            { !! state.length && (
-                                <FileList files={state} />
+                            { !! teste.length && (
+                                <FileList files={teste} />
                             )}
                     </div>  
             </div>
