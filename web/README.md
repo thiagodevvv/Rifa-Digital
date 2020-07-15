@@ -1,4 +1,4 @@
-#h1Rifa Digital
+#Rifa Digital
 
 
 O que o projeto faz:
