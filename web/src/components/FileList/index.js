@@ -9,7 +9,7 @@ import { MdCheckCircle, MdError,MdLink } from 'react-icons/md'
 const FileList = ({files}) => (
     <Container>
       {files.map(uploadFile => (
-          <li >
+          <li key={uploadFile.id}>
           <FileInfo>
               <Preview src={uploadFile.preview} />
               <div>

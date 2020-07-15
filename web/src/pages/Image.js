@@ -11,10 +11,9 @@ function Image () {
 
 
   const [teste, setTeste] = useState([])
-    
-    const { AddImage } = useContext(Context)
 
-    const handleSubmit =  (files) => {
+    const handleSubmit = (files) => {
+       
             const uploadFiles = files.map(file => ({
                 file,
                 id: uniqueId(),
@@ -26,7 +25,7 @@ function Image () {
                 error: false,
                 url: null
             }))
-
+    
             setTeste([...teste, {
                 file: uploadFiles[0].file,
                 name: uploadFiles[0].name,
@@ -36,33 +35,28 @@ function Image () {
                 uploaded: false,
                 error: false,
                 url: null,
-                id: uploadFiles.id
-             }])  
+                id: uploadFiles[0].id
+             }])
+
 
              const updateFile = (id, data) => {
-                setTeste({uploadFiles: uploadFiles.map(uploadFile => {
-                    return id === uploadFile.id ? { ...uploadFile, ...data} : uploadFile
-                })})
+                
+                setTeste(teste.map(uploadFile => {
+                    return id === uploadFile.id ? {...teste, ...data} : uploadFiles[0]
+                }))
              }
-        
-
-     try {
-        const id = localStorage.getItem('id')
+     
+        const idRifa = localStorage.getItem('id')
         const data = new FormData()
-        data.append("file", uploadFiles.file)
-        console.log(data)
-        api.post(`/images/${id}`, data, {
+        data.append("file", uploadFiles[0].file)
+        api.post(`http://localhost:3333/images/${idRifa}`, data, {
             onUploadProgress: e => {
                 const progress = parseInt(Math.round((e.loaded * 100) / e.total))
-                updateFile(uploadFiles.id, {
-                    progress,
+                updateFile(uploadFiles[0].id, {
+                    progress:progress
                 })
             }
         })
-     }
-     catch(err) {
-         console.log(err)
-     }
     }
 
 
