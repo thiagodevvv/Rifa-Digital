@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect}from 'react'
 
 import Control from '../components/Control'
 import TimeLine from '../components/TimeLine'
@@ -6,8 +6,11 @@ import TimeLine from '../components/TimeLine'
 import './style/StylePages.css'
 
 function Home () {
+    useEffect(() => {
+        document.title = "Rifa Digital"
+     }, [])
     return (
-        <body>  
+        <body>
         <div className="container">
             <header className="header">
                 <section className="logo-bar">

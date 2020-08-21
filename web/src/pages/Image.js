@@ -3,14 +3,13 @@ import {Context} from '../Context/AuthContext'
 import Dropzone from 'react-dropzone'
 import { DropContainer, UploadMessage} from './style/style'
 import FileList from '../components/FileList/index'
-import { uniqueId } from 'lodash'
+import { uniqueId, set } from 'lodash'
 import filesize from 'filesize'
 import api from '../services/api'
 
 function Image () {
 
-
-  const [teste, setTeste] = useState([])
+    const [teste, setTeste] = useState([])
 
     const handleSubmit = (files) => {
        
@@ -36,36 +35,43 @@ function Image () {
                 error: false,
                 url: null,
                 id: uploadFiles[0].id
-             }])
+            }])
 
+            
+            const config = {
+                onUploadProgress: function(progressEvent) {
+                  const percentCompleted = Math.round( (progressEvent.loaded * 100) / progressEvent.total )
+                  setTeste([...teste, {
+                      progress: percentCompleted,
+                      name: uploadFiles[0].name,
+                      preview: uploadFiles[0].preview,
 
-             const updateFile = (id, data) => {
-                
-                setTeste(teste.map(uploadFile => {
-                    return id === uploadFile.id ? {...teste, ...data} : uploadFiles[0]
-                }))
-             }
-     
-        const idRifa = localStorage.getItem('id')
-        const data = new FormData()
-        data.append("file", uploadFiles[0].file)
-        api.post(`http://localhost:3333/images/${idRifa}`, data, {
-            onUploadProgress: e => {
-                const progress = parseInt(Math.round((e.loaded * 100) / e.total))
-                updateFile(uploadFiles[0].id, {
-                    progress:progress
-                })
-            }
-        })
+                  }])  
+                }
+              }
+
+            const idRifa = localStorage.getItem('id')
+            const data = new FormData()
+            data.append("file", uploadFiles[0].file)
+            api.post(`http://localhost:3333/images/${idRifa}`, data, config)
+            .then(() => {
+                setTeste([...teste, {
+                    name: uploadFiles[0].name,
+                    preview: uploadFiles[0].preview,
+                    uploaded: true,
+
+                }])
+            })
+           
     }
 
 
-     const renderDragMessage = (isDragActive, isDragReject) => {
-        if(!isDragActive) {
-            return <UploadMessage>Arraste ou selecione arquivos aqui</UploadMessage>
-        }
-        if(isDragReject) {
-            return <UploadMessage type="error">Arquivo não suportado</UploadMessage>
+            const renderDragMessage = (isDragActive, isDragReject) => {
+                if(!isDragActive) {
+                    return <UploadMessage>Arraste ou selecione arquivos aqui</UploadMessage>
+            }
+                if(isDragReject) {
+                    return <UploadMessage type="error">Arquivo não suportado</UploadMessage>
         }
 
         return <UploadMessage type="success"> Soltar arquivos aqui </UploadMessage>

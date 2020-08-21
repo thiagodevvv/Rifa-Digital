@@ -140,33 +140,20 @@
 .list-timeline {
     background-color:rgb(255, 227, 196);
     width: 700px;
-    height: 560px;
+    height: 300px;
     border-radius: 50px;
-    margin-top: 30px;
 }
 
-.image {
-    width: 100%;
-    height: 300px;
-    width: 600px;
-    border-radius: 10px;
-    border: 2px solid black;
-}
 .image-timeline {
     margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
 }
 
 .container-isolado {
     display: flex;
     flex-direction: row;
-}
-
-.separador {
-    width: 10px;
-}
-
-.separador-altura {
-    height: 5px;
 }
 
 .btn {
@@ -237,6 +224,7 @@
     font-weight: bold;
     font-size: 15px;
     border: none;
+    margin-top: 5px;
 }
 
 .btn-compartilhar:hover {

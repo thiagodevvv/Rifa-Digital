@@ -43,8 +43,8 @@ export const FileInfo = styled.div `
 `
 
 export const Preview = styled.div `
-    width: 36px;
-    height: 36px;
+    width: 56px;
+    height: 56px;
     border-radius: 5px;
     background-image: url(${props => props.src});
     background-repeat: no-repeat;
@@ -52,4 +52,10 @@ export const Preview = styled.div `
     background-position: 50% 50%; 
     margin-right: 10px;
     border: 1px solid black;
+`
+
+export const Icons = styled.div `
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
 `
