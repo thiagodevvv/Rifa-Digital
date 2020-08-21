@@ -40,7 +40,7 @@ function TimeLine () {
                         <h4>Data do Sorteio:  {formatedDate(data.datasorteio)}</h4>
                         <h4>Valor: R$ {data.valor}<br></br></h4>
                             <div className="btn">
-                                <img src={car}  width="30px" heigth="30px" alt="Icone carrinho de compra"/>
+                                <img src={car} width="30px" heigth="30px" alt="Icone carrinho de compra"/>
                                 <span className="span-buy">Comprar</span>
                             </div>
                         <button className="btn-compartilhar" type="button">Compartilhar</button>

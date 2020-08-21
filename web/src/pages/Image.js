@@ -1,11 +1,11 @@
 import React, {useContext, useState,useEffect} from 'react'
-import {Context} from '../Context/AuthContext'
 import Dropzone from 'react-dropzone'
 import { DropContainer, UploadMessage} from './style/style'
 import FileList from '../components/FileList/index'
-import { uniqueId, set } from 'lodash'
+import { uniqueId,} from 'lodash'
 import filesize from 'filesize'
 import api from '../services/api'
+import history from '../history'
 
 function Image () {
 
@@ -61,6 +61,9 @@ function Image () {
                     uploaded: true,
 
                 }])
+                window.alert('Rifa Criada com Sucesso!')
+                history.push('/')
+
             })
            
     }

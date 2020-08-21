@@ -14,7 +14,7 @@ function Home () {
         <div className="container">
             <header className="header">
                 <section className="logo-bar">
-                    <h1> <span className="orange">R</span>ifa <br></br> <span className="orange">D</span>igital</h1>
+                    <h1 id="logo-text">Rifa <br></br>Digital</h1>
                 </section>
               <div className="menu-bar">
                   <a className="header-box-shadow" href="/">Home  </a>
